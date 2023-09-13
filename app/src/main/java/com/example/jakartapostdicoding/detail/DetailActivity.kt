@@ -3,29 +3,21 @@ package com.example.jakartapostdicoding.detail
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
+import com.example.core.domain.model.NewsTech
 import com.example.jakartapostdicoding.R
-import com.example.jakartapostdicoding.core.domain.model.NewsTech
-import com.example.jakartapostdicoding.core.ui.ViewModelFactory
 import com.example.jakartapostdicoding.databinding.ActivityDetailBinding
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class DetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailBinding
-    private lateinit var detailViewModel: DetailViewModel
-
-    companion object {
-        const val EXTRA_DATA = "extra_data"
-    }
+    private val detailViewModel: DetailViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        val factory = ViewModelFactory.getInstance(this)
-        detailViewModel = ViewModelProvider(this, factory)[DetailViewModel::class.java]
 
         val detailNewsTech = intent.getParcelableExtra<NewsTech>(EXTRA_DATA)
         showDetailNewsTech(detailNewsTech)
@@ -63,5 +55,9 @@ class DetailActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
+    }
+
+    companion object {
+        const val EXTRA_DATA = "extra_data"
     }
 }

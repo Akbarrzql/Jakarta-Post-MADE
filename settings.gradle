@@ -15,3 +15,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Jakarta Post (DICODING)"
 include ':app'
+include ':core'
+include ':favorite'

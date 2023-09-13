@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_favorite">Tidak terdapat data favorite</string>
+    <string name="title_favorite">Favorite</string>
+</resources>

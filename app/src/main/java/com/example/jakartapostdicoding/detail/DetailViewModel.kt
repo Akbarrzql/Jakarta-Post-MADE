@@ -1,8 +1,8 @@
 package com.example.jakartapostdicoding.detail
 
 import androidx.lifecycle.ViewModel
-import com.example.jakartapostdicoding.core.domain.model.NewsTech
-import com.example.jakartapostdicoding.core.domain.usecase.NewsTechUseCase
+import com.example.core.domain.model.NewsTech
+import com.example.core.domain.usecase.NewsTechUseCase
 
 class DetailViewModel(private val newsTechUseCase: NewsTechUseCase): ViewModel() {
 

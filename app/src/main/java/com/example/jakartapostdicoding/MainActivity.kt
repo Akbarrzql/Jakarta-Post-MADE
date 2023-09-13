@@ -1,12 +1,12 @@
 package com.example.jakartapostdicoding
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.jakartapostdicoding.databinding.ActivityMainBinding
-import com.example.jakartapostdicoding.favorite.FavoriteFragment
 import com.example.jakartapostdicoding.home.HomeFragment
-import com.google.android.material.navigation.NavigationBarView
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,7 +25,9 @@ class MainActivity : AppCompatActivity() {
                     setCurrentFragment(HomeFragment())
                 }
                 R.id.favorite -> {
-                    setCurrentFragment(FavoriteFragment())
+
+                    val uri = Uri.parse("newsapp://favorite")
+                    startActivity(Intent(Intent.ACTION_VIEW, uri))
                 }
             }
             true
