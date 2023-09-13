@@ -2,8 +2,14 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.JakartaPostDICODING" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+         <item name="colorPrimary">@color/purple_200</item>
     </style>
 
     <style name="Theme.JakartaPostDICODING" parent="Base.Theme.JakartaPostDICODING" />
+
+    //appbar overlay
+    <style name="Theme.JakartaPostDICODING.AppBarOverlay" parent="ThemeOverlay.Material3.ActionBar" />
+
+    //popup overlay
+    <style name="Theme.JakartaPostDICODING.PopupOverlay" parent="ThemeOverlay.Material3.Dialog" />
 </resources>
