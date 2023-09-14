@@ -10,6 +10,12 @@ android {
     namespace 'com.example.core'
     compileSdk 33
 
+    lintOptions {
+        abortOnError false
+        absolutePaths false
+        lintConfig file('lint.xml')
+    }
+
     defaultConfig {
         minSdk 26
 

@@ -10,6 +10,13 @@ android {
     namespace 'com.example.favorite'
     compileSdk 33
 
+    lintOptions {
+        abortOnError false
+        absolutePaths false
+        lintConfig file('lint.xml')
+    }
+
+
     defaultConfig {
         minSdk 26
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

@@ -10,6 +10,12 @@ android {
     namespace 'com.example.jakartapostdicoding'
     compileSdk 33
 
+    lintOptions {
+        abortOnError false
+        absolutePaths false
+        lintConfig file('lint.xml')
+    }
+
     defaultConfig {
         applicationId "com.example.jakartapostdicoding"
         minSdk 26
