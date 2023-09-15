@@ -15,7 +15,7 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:4.13.2"
 
     implementation "androidx.room:room-runtime:2.5.2"
-    kapt "androidx.room:room-compiler:2.5.2"
+    ksp "androidx.room:room-compiler:2.5.2"
     androidTestImplementation "androidx.room:room-testing:2.5.2"
 
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
@@ -32,4 +32,10 @@ dependencies {
     implementation "io.insert-koin:koin-android:2.1.6"
     implementation "io.insert-koin:koin-android-viewmodel:2.1.6"
     implementation "io.insert-koin:koin-androidx-ext:2.1.6"
+
+    //leak canary
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.10'
+
+    //multi dex
+    implementation 'com.android.support:multidex:2.0.1'
 }

@@ -28,6 +28,7 @@ class DetailActivity : AppCompatActivity() {
             supportActionBar?.title = detailNewsTech.title
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+            binding.content.tvDateDetail.text = detailNewsTech.pusblisedAt
             binding.content.tvDetailTitle.text = detailNewsTech.title
             binding.content.tvDetailDescription.text = detailNewsTech.headline
             Glide.with(this@DetailActivity)

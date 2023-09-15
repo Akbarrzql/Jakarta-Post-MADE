@@ -1,5 +1,6 @@
 package com.example.core.ui
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +15,7 @@ class NewsTechAdapter: RecyclerView.Adapter<NewsTechAdapter.NewsTechViewHolder>(
     private var listData = ArrayList<NewsTech>()
     var onItemClick: ((NewsTech) -> Unit)? = null
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setData(newListData: List<NewsTech>?) {
         if (newListData == null) return
         listData.clear()
